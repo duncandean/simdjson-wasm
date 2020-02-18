@@ -1,0 +1,7 @@
+<script src="a.out.js"></script>
+<script>
+  Module.onRuntimeInitialized = _ => {
+    const version = Module.cwrap('version', 'number', []);
+    console.log(version());
+  };
+</script>
